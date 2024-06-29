@@ -3,11 +3,11 @@
 //Imports
 import { UI } from "./ui.js";
 import { addCardlisteners } from "./games.js"
+
 //HTML Elements
 const displayed_games = document.getElementById("displayed_games");
 export const game_details = document.getElementById("game_details")
 export const games = document.getElementById("games")
-const close_btn = document.getElementById("close_btn")
 
 //instanciated objects
 const display = new UI();
@@ -41,9 +41,5 @@ async function getGamesData() {
 
 }
 
-if (close_btn) {
 
-    
-
-}
 getGamesData()

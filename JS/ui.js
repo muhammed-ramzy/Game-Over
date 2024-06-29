@@ -4,7 +4,7 @@ export class UI {
 
         for (let i = 0; i < arr.length; i++) {
             blackBox += `
-                        <div class="col col-md-3 col-lg-3 col-xxl-4 ">
+                        <div class="col-sm-12 col-md-6 col-lg-4">
                         <div class="item">
                             <div class="card pb-0 bg-transparent" role="button" data-id = "${arr[i].id}" >
                                 <div class="card-body p-3  pb-0 text-white">
