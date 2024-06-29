@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over</title>
+
+    <!-- FontAwesome icons css file -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap css file -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- My Animaition css file -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- My Media Query css file -->
+    <link rel="stylesheet" href="css/media.css">
+    <!-- My Main CSS file -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="main-font-family position-relative">
+
+    <!-- Game's details -->
+    <section id="game_details"  class="container visually-hidden">
+        
+    </section>
+
+
+    <!-- Games -->
+    <section id="games" class="">
+        <header id="main-bg-image">
+            <img src="images/wraper.png" alt="">
+        </header>
+
+        <div class="container position-sticky nav-container">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg rounded-4 m-auto position-relative">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-uppercase" href="#"><img src="images/logo-sm.png" class="logo"
+                            alt="">game
+                        reviews</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active text-uppercase" aria-current="page" href="#">mmorpg</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="#">shooter</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="#">sailing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="#">permadeath</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="#">superhero</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-uppercase" href="#">pixel</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <section class="container position-relative">
+                <div class="row gy-4" id="displayed_games">
+
+                </div>
+            </section>
+        </main>
+    </section>
+
+    
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/index.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+/* ================= Start fonts ================= */
+@font-face {
+    font-family: 'Nerko One';
+    src: url('../webfonts/NerkoOne-Regular.woff2') format('woff2'),
+        url('../webfonts/NerkoOne-Regular.woff') format('woff'),
+        url('../webfonts/NerkoOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('../webfonts/Comfortaa-Regular.woff2') format('woff2'),
+        url('../webfonts/Comfortaa-Regular.woff') format('woff'),
+        url('../webfonts/Comfortaa-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ================= End fonts ================= */
+
+:root {
+    /* Start Color classes */
+    --my-dark-color: #1E202B;
+    --my-light-color: #262936;
+    --my-lighter-color: #323544;
+
+    --my-card-light-header-color: #222531;
+    --my-card-lighter-header-color: #2D303D;
+
+    --my-bg-blue-color: #009AD8;
+    --my-body-text-color: #bfc1c8;
+    --my-white-text-color: #fff;
+    --my-blue-text-color: #009ad8;
+    /* End Color classes */
+
+    /* Start Font Variables */
+    --my-main-font-family: 'Comfortaa';
+    --my-sec-font-family: 'Nerko One';
+    /* End Font Variables */
+
+    /* Start Font sizes */
+    --my-10-font: 0.625rem;
+    /* 10px */
+    --my-11-font: 0.6875rem;
+    /* 11px */
+    --my-12-font: 0.75rem;
+    /* 12px */
+    --my-14-font: 0.875rem;
+    /* 14px */
+    --my-16-font: 1rem;
+    /* 16px */
+    --my-24-font: 1.5rem;
+    /* 24px */
+    /* End Font sizes */
+}
+
+/* ================= Start Root Classes ================= */
+
+
+/* Start Font classes */
+
+.main-font-family {
+    font-family: var(--my-main-font-family);
+}
+
+.sec-font-family {
+    font-family: var(--my-sec-font-family);
+}
+
+/* End Font classes */
+
+
+
+/* Start font sizes classes */
+.my-10-font {
+    font-size: var(--my-10-font);
+}
+
+.my-11-font {
+    font-size: var(--my-11-font);
+}
+
+.my-12-font {
+    font-size: var(--my-12-font);
+}
+
+.my-14-font {
+    font-size: var(--my-14-font);
+}
+
+.my-16-font {
+    font-size: var(--my-16-font);
+}
+
+.my-24-font {
+    font-size: var(--my-24-font);
+}
+
+/* End font sizes classes */
+
+
+
+/* Start color classes */
+
+.my-dark-color {
+    background-color: var(--my-dark-color);
+}
+
+.my-light-color {
+    background-color: var(--my-light-color);
+}
+
+.my-lighter-color {
+    background-color: var(--my-lighter-color);
+}
+
+.my-card-light-header-color {
+    background-color: var(--my-card-light-header-color);
+}
+
+.my-card-lighter-header-color {
+    background-color: var(--my-card-lighter-header-color);
+}
+
+.my-bg-blue-color {
+    background-color: var(--my-bg-blue-color);
+}
+
+.my-body-text-color {
+    color: var(--my-body-text-color);
+}
+
+.my-white-text-color {
+    color: var(--my-white-text-color);
+}
+
+.my-blue-text-color {
+    color: var(--my-blue-text-color);
+}
+
+/* End color classes */
+
+
+
+/* ================= End Root Classes ================= */
+
+
+
+
+/* ================== Start General Style  ================== */
+a {
+    color: unset;
+}
+
+body {
+    background-color: #272B30;
+}
+
+/* ================== End General Style ================== */
+
+
+
+
+
+/* ================== Start Header Style  ================== */
+header img {
+    width: 100%;
+    max-height: 30vh;
+    object-fit: cover;
+}
+
+/* ================== End Header Style  ================== */
+
+
+
+
+/* ================== Start nav Style  ================== */
+.nav-container {
+    top: 2rem;
+    z-index: 3;
+}
+
+.navbar {
+    top: -2rem;
+    --bs-navbar-brand-color: white;
+
+}
+
+nav {
+    background-color: #3A497B;
+    width: 90%;
+}
+
+nav .logo {
+    width: 3rem;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: #09c;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: #09c;
+}
+
+.nav-item {
+    font-size: 0.75rem;
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover {
+    color: white;
+}
+
+/* ================== End nav Style  ================== */
+
+
+
+
+/* ================== Start Card Style  ================== */
+.card h5
+{
+    line-height: 2;
+}
+
+.card
+{
+    filter: grayscale(0.7);
+    transition: all 0.5s;
+}
+.card:hover
+{
+    transform: scale(1.08);
+    filter: grayscale(0);
+}
+/* ================== End Card Style  ================== */
+
+
+
+
+/* ==================================== Start Game Details Section  ==================================== */
+.game-details button.btn-close:hover
+{
+    opacity: 1;
+}
+
+/* ==================================== End Game Details Section  ==================================== */

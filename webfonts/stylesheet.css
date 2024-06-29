@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Nerko One';
+    src: url('NerkoOne-Regular.woff2') format('woff2'),
+        url('NerkoOne-Regular.woff') format('woff'),
+        url('NerkoOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nerko One';
+    src: url('NerkoOne-Regular_1.woff2') format('woff2'),
+        url('NerkoOne-Regular_1.woff') format('woff'),
+        url('NerkoOne-Regular_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('Comfortaa-Regular.woff2') format('woff2'),
+        url('Comfortaa-Regular.woff') format('woff'),
+        url('Comfortaa-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
