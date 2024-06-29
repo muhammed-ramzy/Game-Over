@@ -33,16 +33,16 @@ export class UI {
     }
 
     display_details(gameObject, htmlElement) {
-        let blackBox = `<div class="row justify-content-between text-white align-items-center py-4">
+        let blackBox = `<div class="row justify-content-between text-white align-items-center py-4 px-2 px-md-0">
             <h2 class="col-11 sec-font-family">Details Game</h2>
             <button id="close_btn" class="col-1 btn-close btn-close-white">
             </button>
         </div>
-        <div class="row border-bottom pb-4 border-dark-subtle">
-            <div class="col-4">
-                <img src="${gameObject.thumbnail}" class="img-fluid" alt="">
+        <div class="row px-2 px-md-0 border-bottom pb-4 border-dark-subtle">
+            <div class="col-12 col-md-4">
+                <img src="${gameObject.thumbnail}" class="img-fluid mb-3 mb-md-0" alt="">
             </div>
-            <div class="col-8 text-white">
+            <div class="col-12 col-md-8 text-white">
                 <h3 class="sec-font-family">Title: <span>${gameObject.title}</span></h3>
                 <ul class="list-unstyled main-font-family">
                     <li class="mb-3">Category: <span class="badge bg-info text-black">${gameObject.genre}</span></li>
@@ -56,7 +56,7 @@ export class UI {
             </div>
         </div>
         <!-- Requirements -->
-        <section id="requirements"> 
+        <section id="requirements" class=" px-2 px-md-0"> 
         <h3 class="text-center text-info p-2">Minimum System Requirements</h3>
         <ul class="list-unstyled main-font-family text-white">
                 <li class="mb-3">Graphics: <span class="badge bg-info text-black">${(gameObject.minimum_system_requirements.graphics) == null ? "not found" : (gameObject.minimum_system_requirements.graphics)}</span></li>
