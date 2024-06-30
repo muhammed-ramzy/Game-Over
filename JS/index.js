@@ -70,11 +70,11 @@ getGamesData()
 
 
 // Loader functions
-function displayLoader()
+export function displayLoader()
 {
     loader.classList.remove("visually-hidden");
 }
-function removeLoader()
+export function removeLoader()
 {
     loader.classList.add("visually-hidden");
 }

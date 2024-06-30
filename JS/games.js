@@ -1,7 +1,7 @@
 //imports
 
 import {UI} from "./ui.js"
-import { game_details, games } from "./index.js";
+import { game_details, games, displayLoader, removeLoader } from "./index.js";
 const display = new UI();
 
 
@@ -12,6 +12,8 @@ export function addCardlisteners(cards) {
             getGameDetail(id)
             game_details.classList.remove("visually-hidden")
             games.classList.add("visually-hidden")
+
+            displayLoader()
         }
         )
     }
@@ -19,6 +21,8 @@ export function addCardlisteners(cards) {
 
 // API for game details
 async function getGameDetail(id) {
+
+
 
     const url = `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`;
     const options = {
@@ -31,6 +35,9 @@ async function getGameDetail(id) {
 
     const api = await fetch(url, options);
     const response = await api.json();
+
+    removeLoader()
+
     display.display_details(response, game_details)
 
     
