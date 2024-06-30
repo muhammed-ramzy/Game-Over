@@ -17,7 +17,7 @@ export function addCardlisteners(cards) {
     }
 }
 
-
+// API for game details
 async function getGameDetail(id) {
 
     const url = `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`;

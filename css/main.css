@@ -173,8 +173,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
- }
- .loader {
+}
+
+.loader {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -184,8 +185,9 @@ body {
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
     position: relative;
- }
- .loader::after {
+}
+
+.loader::after {
     content: "";
     box-sizing: border-box;
     position: absolute;
@@ -197,15 +199,18 @@ body {
     border-left: 4px solid #ff3d00;
     border-bottom: 4px solid transparent;
     animation: rotation 0.5s linear infinite reverse;
- }
- @keyframes rotation {
+}
+
+@keyframes rotation {
     0% {
-       transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
     100% {
-       transform: rotate(360deg);
+        transform: rotate(360deg);
     }
- }
+}
+
 /* ================== End loader Style ================== */
 
 
@@ -275,31 +280,44 @@ nav .logo {
 
 
 /* ================== Start Card Style  ================== */
-.card h5
-{
+.card h5 {
     line-height: 2;
 }
 
-.card
-{
+.card {
     filter: grayscale(0.7);
     transition: all 0.5s;
-    height: 23rem;
 }
-.card:hover
-{
+
+.card:hover {
     transform: scale(1.08);
     filter: grayscale(0);
 }
+
 /* ================== End Card Style  ================== */
 
 
 
 
 /* ==================================== Start Game Details Section  ==================================== */
-.game-details button.btn-close:hover
-{
+.game-details button.btn-close:hover {
     opacity: 1;
 }
 
 /* ==================================== End Game Details Section  ==================================== */
+
+
+
+/* ====================== Media Query =========================== */
+
+@media (min-width: 640px) {
+    .card {
+        height: 26rem;
+    }
+}
+@media (min-width: 768px) {
+    .card {
+        height: 21.5rem;
+    }
+}
+
