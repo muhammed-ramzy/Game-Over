@@ -1,4 +1,9 @@
+//imports
+import { loader } from "./index.js";
+
 export class UI {
+
+    //these 2 functions are related to the display of the sections of the games
     display_data(arr, htmlElement) {
         let blackBox = ``;
 
@@ -77,6 +82,13 @@ export class UI {
         })
     }
 
+
+    //Loader spinner related functions
+    displayLoader() {
+        loader.classList.remove("visually-hidden");
+    }
+
+    removeLoader() {
+        loader.classList.add("visually-hidden");
+    }
 }
-
-

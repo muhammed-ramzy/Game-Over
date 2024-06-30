@@ -6,39 +6,47 @@ import { addCardlisteners } from "./games.js"
 
 //HTML Elements
 const displayed_games = document.getElementById("displayed_games");
+const categories = document.querySelectorAll("#nav_item");
+export const loader = document.getElementById("loader");
+
+//The two Game sections
 export const game_details = document.getElementById("game_details");
 export const games = document.getElementById("games");
-const loader = document.getElementById("loader");
-const categories = document.querySelectorAll("#nav_item");
+
+//Variables
+let gamesData = [];
 let category = "mmorpg";
 
+//instanciated objects
+const display = new UI();
+
+//Adding listeners to nav categories filters
 for (let i = 0; i < categories.length; i++) {
-    categories[i].addEventListener("click", () =>{
+    categories[i].addEventListener("click", () => {
+
+        //Removing the blue color from all of them
         for (let j = 0; j < categories.length; j++) {
             categories[j].classList.remove("active")
         }
+
+        //Adding the blue color to the clicked one
         categories[i].classList.add("active")
 
         category = categories[i].getAttribute("data-category");
 
         getGamesData();
     })
-    
+
 }
 
-//instanciated objects
-const display = new UI();
 
-
-//Variables
-let gamesData = [];
 
 // ========================= API part ==================================
 
 // Games API
 async function getGamesData() {
 
-    displayLoader();
+    display.displayLoader();
 
     const url = `https://free-to-play-games-database.p.rapidapi.com/api/games?category=${category}`;
 
@@ -55,26 +63,16 @@ async function getGamesData() {
 
     gamesData = response;
 
-    removeLoader()
+    display.removeLoader();
 
-    display.display_data(gamesData, displayed_games)
-    const cards = document.querySelectorAll(".card")
+    display.display_data(gamesData, displayed_games);
+
+    //this code here to select them when they appear
+    const cards = document.querySelectorAll(".card");
     addCardlisteners(cards)
 
 
 }
 
 
-getGamesData()
-
-
-
-// Loader functions
-export function displayLoader()
-{
-    loader.classList.remove("visually-hidden");
-}
-export function removeLoader()
-{
-    loader.classList.add("visually-hidden");
-}
+getGamesData();

@@ -1,19 +1,24 @@
 //imports
-
 import {UI} from "./ui.js"
-import { game_details, games, displayLoader, removeLoader } from "./index.js";
+import { game_details, games} from "./index.js";
+
+//instanciated objects
 const display = new UI();
 
 
 export function addCardlisteners(cards) {
     for (let i = 0; i < cards.length; i++) {
-        cards[i].addEventListener("click", function (eventInfo) {
+        cards[i].addEventListener("click", function () {
+
+            //Getting the id of the card clicked
             let id = cards[i].getAttribute("data-id");
             getGameDetail(id)
+
+            //Hiding the games section and showing the detail section
             game_details.classList.remove("visually-hidden")
             games.classList.add("visually-hidden")
 
-            displayLoader()
+            display.displayLoader()
         }
         )
     }
@@ -21,10 +26,8 @@ export function addCardlisteners(cards) {
 
 // API for game details
 async function getGameDetail(id) {
-
-
-
     const url = `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`;
+
     const options = {
         method: 'GET',
         headers: {
@@ -36,10 +39,7 @@ async function getGameDetail(id) {
     const api = await fetch(url, options);
     const response = await api.json();
 
-    removeLoader()
+    display.removeLoader()
 
     display.display_details(response, game_details)
-
-    
-    console.log(response);
 }

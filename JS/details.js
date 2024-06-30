@@ -1,1 +1,0 @@
-// has all the mothods that have things to do with datails section
