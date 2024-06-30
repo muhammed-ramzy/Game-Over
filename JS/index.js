@@ -13,7 +13,13 @@ let category = "mmorpg";
 
 for (let i = 0; i < categories.length; i++) {
     categories[i].addEventListener("click", () =>{
+        for (let j = 0; j < categories.length; j++) {
+            categories[j].classList.remove("active")
+        }
+        categories[i].classList.add("active")
+        
         category = categories[i].getAttribute("data-category");
+
         getGamesData();
     })
     
