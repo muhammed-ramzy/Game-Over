@@ -14,6 +14,7 @@ let category = "mmorpg";
 for (let i = 0; i < categories.length; i++) {
     categories[i].addEventListener("click", () =>{
         category = categories[i].getAttribute("data-category");
+        getGamesData();
     })
     
 }
